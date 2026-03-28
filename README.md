@@ -1,4 +1,4 @@
 # CSD 340 Web Development with HTML and CSS
 ## Contributors
-.... * Adam Bailey 
+* Adam Bailey 
 * Noah McCarthy
