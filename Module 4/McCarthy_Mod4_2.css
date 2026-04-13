@@ -1,0 +1,84 @@
+#container h1{
+
+    text-align: center;
+    color: gold;
+
+}
+
+#image-gallery{
+
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    border: 2px solid black;
+}
+
+#image-gallery img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+#image-gallery-left h3{
+
+    text-align: center;
+     color: red;
+    
+}
+    
+#image-gallery-left figcaption{
+
+    text-align: center;
+    font-style: italic;
+    font-size: .75em;
+    background-color:darkmagenta
+
+}
+
+#image-gallery-center{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image-gallery-center h3{
+    
+    text-align: center;
+    color: brown;
+    
+}
+
+#image-gallery-center figcaption{
+    
+    text-align: center;
+    font-style: italic;
+    font-size: .75em;
+    background-color:burlywood
+}
+
+#image-gallery-right h3{
+    
+    text-align: center;
+    color:green
+    
+}
+
+#image-gallery-right figcaption{
+    text-align: center;
+    font-style: italic;
+    font-size: .75em;
+    background-color: aqua;
+
+}
+
+#bottom{
+    float: right;
+    text-align: right;
+    width: 100%;
+}
