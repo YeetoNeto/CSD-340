@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+  'http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd'>
+
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>
+      CSD 340 Development with HTML and CSS
+    </title>
+    <script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+        
+      }
+    </script>
+
+    <link rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+    <h1>
+      Assignment 10.3: JavaScript Part 2
+    </h1>
+    <br />
+    <div>
+      <a href=#
+         onmouseover="gojo.src='hollow_purp_release.gif';"
+         onmouseout= "gojo.src='hollow_purp_buildup.gif';"
+         onclick= "window.open('https://en.wikipedia.org/wiki/Satoru_Gojo', '_blank');"
+      >
+        <img border = 0 name = "gojo" src = "hollow_purp_buildup.gif">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
+
+      Run your mouse over the image to change.
+      Additionally, click the image for a suprise!
+      <br />
+
+    </div>
+    <div>
+      <a href=#
+         onmouseover="hakari.src='hakari_dance.gif';"
+         onmouseout= "hakari.src='hakari_still.jpg';"
+         onclick= "window.open('https://www.youtube.com/watch?v=34Pl2DTuwoQ', '_blank');"
+      >
+        <img border = 0 name = "hakari" src = "hakari_still.jpg">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
+
+      Run your mouse over the image to change.
+      dditionally, click the image for a suprise!
+      <br />
+      Right-click and select View Source for more details.
+
+    </div>
+
+  </body>
+
+</html>
