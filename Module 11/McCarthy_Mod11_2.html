@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+  'http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd'>
+
+  <head>
+    <title>
+      CSD 340 Development with HTML and CSS
+    </title>
+    <script>
+       var List = [];
+
+        function AddInput() {
+            var userInput = document.getElementById("userInput").value;
+            if (userInput.trim() !== "") {
+                List.push(userInput);
+            }
+            document.getElementById("userInput").value = "";
+            DisplayList();
+        }
+        function DeleteLastEntry() {
+            if (List.length > 0) {
+                alert("Last entry deleted! (" + List[List.length - 1] + ")");
+                List.pop();
+
+            }
+            DisplayList();
+        }
+        function Sort() {
+            List.sort();
+            alert("List has been sorted!");
+            DisplayList();
+        }
+        function DisplayList() {
+            var listContainer = document.getElementById("listContainer");
+            listContainer.innerHTML = "";
+            var ListTitle = document.createElement("h2");
+            ListTitle.textContent = "Things to Do:";
+            listContainer.appendChild(ListTitle);
+            for (var i = 0; i < List.length; i++) {
+                var listItem = document.createElement("li");
+                listItem.textContent = List[i];
+                listContainer.appendChild(listItem);
+            }
+        }
+      
+    </script>
+
+    <link rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+    <h1>
+      Assignment 10.3: JavaScript Part 3
+    </h1>
+    <p>
+        Enter a task below and click "Add" to add it to the list. Click "Delete Last Entry" to remove the most recently added task. Click "Sort" to sort the list alphabetically. 
+        The list will be displayed below.
+    </p>
+    <br />
+    <input type="text" id="userInput" placeholder="Enter some text...">
+    <br />
+    <br />
+    <input type="button" value="Add" onclick="AddInput()">
+    <input type="button" value="Delete Last Entry" onclick="DeleteLastEntry()">
+    <input type="button" value="Sort" onclick="Sort()">
+
+    <div id="DisplayList">
+        <h2 id="ListTitle"> </h2> 
+        <ul id="listContainer">
+            
+        </ul>
+    </div>
+  </body>
+
+</html>
